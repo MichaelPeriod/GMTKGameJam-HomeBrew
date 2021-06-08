@@ -6,6 +6,7 @@ public class SplashScreen : MonoBehaviour
 {
     public Animator Panel;
     public GameObject FontText;
+    public GameObject Particle;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class SplashScreen : MonoBehaviour
     void ShowTxt()
     {
      	FontText.SetActive(true);
+	Particle.SetActive(true);
 	Invoke("FadeAway", 3f);   
     }
     void FadeAway() {
