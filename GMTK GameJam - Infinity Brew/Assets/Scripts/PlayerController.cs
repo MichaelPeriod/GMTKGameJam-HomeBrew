@@ -12,8 +12,7 @@ public class PlayerController : MonoBehaviour
         RB = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         RB.AddForce(new Vector2(Input.GetAxis("Horizontal") * playerSpeed, Input.GetAxis("Vertical") * playerSpeed));
     }
