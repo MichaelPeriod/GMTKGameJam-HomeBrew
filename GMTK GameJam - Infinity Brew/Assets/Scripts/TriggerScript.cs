@@ -5,19 +5,30 @@ using UnityEngine;
 
 public class TriggerScript : MonoBehaviour
 {
+    public int TriggerID = 0;
     public bool hold = false;
     public bool active = false;
-    public Tilemap Background_Map;
-    public Tilemap Colider_Map;
-    
-    public Tile tile; 
+    private ManageEvents GSMScript;
 
-    // Start is called before the first frame update
+    void Start(){
+        GSMScript = GameObject.Find("GameStateManager").GetComponent<ManageEvents>();
+    }
+
     void OnTriggerEnter2D(Collider2D collision){
         if (collision.gameObject.tag == "Player"){
-            Background_Map.SetTile(new Vector3Int(-9, -3, 0), tile);
-            Colider_Map.SetTile(new Vector3Int(-9, -3, 0), null);
+            GSMScript.manageTriggerPress(TriggerID);
+            active = true;
             Debug.Log("Active");
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision){
+        if (collision.gameObject.tag == "Player"){
+            if(hold){
+                GSMScript.manageTriggerRelease(TriggerID);
+                active = false;
+                Debug.Log("Deactivated");
+            }
         }
     }
 }
