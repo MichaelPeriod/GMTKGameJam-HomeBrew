@@ -18,6 +18,7 @@ public class TriggerScript : MonoBehaviour
         if (collision.gameObject.tag == "Player"){
             GSMScript.manageTriggerPress(TriggerID);
             active = true;
+            gameObject.GetComponent<Animator>().SetBool("Active", true);
             Debug.Log("Active");
         }
     }
@@ -27,6 +28,7 @@ public class TriggerScript : MonoBehaviour
             if(hold){
                 GSMScript.manageTriggerRelease(TriggerID);
                 active = false;
+                gameObject.GetComponent<Animator>().SetBool("Active", false);
                 Debug.Log("Deactivated");
             }
         }
