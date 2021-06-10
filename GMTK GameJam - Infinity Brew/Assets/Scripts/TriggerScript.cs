@@ -16,9 +16,10 @@ public class TriggerScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision){
         if (collision.gameObject.tag == "Player"){
-            GSMScript.manageTriggerPress(TriggerID);
-            active = true;
-            gameObject.GetComponent<Animator>().SetBool("Active", true);
+            //Trigger has been pressed
+            GSMScript.manageTriggerPress(TriggerID); //Manage the press
+            active = true; //Used for other objects checking the state, possably useless
+            gameObject.GetComponent<Animator>().SetBool("Active", true); //Change animation state
             Debug.Log("Active");
         }
     }
@@ -26,9 +27,10 @@ public class TriggerScript : MonoBehaviour
     void OnTriggerExit2D(Collider2D collision){
         if (collision.gameObject.tag == "Player"){
             if(hold){
-                GSMScript.manageTriggerRelease(TriggerID);
-                active = false;
-                gameObject.GetComponent<Animator>().SetBool("Active", false);
+                //Is toggleable and was released
+                GSMScript.manageTriggerRelease(TriggerID); //Manage letting go
+                active = false;//Used for other objects checking the state, possably useless
+                gameObject.GetComponent<Animator>().SetBool("Active", false); //Change animation state
                 Debug.Log("Deactivated");
             }
         }
