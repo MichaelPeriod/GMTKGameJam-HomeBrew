@@ -387,6 +387,7 @@ MonoBehaviour:
   playerNumber: 1
   cutDistance: 1
   otherPlayer: {fileID: 435999264}
+  Chain: {fileID: 0}
 --- !u!1 &435999264
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +490,7 @@ MonoBehaviour:
   playerNumber: 2
   cutDistance: 1
   otherPlayer: {fileID: 433819751}
+  Chain: {fileID: 949644552}
 --- !u!50 &435999268
 Rigidbody2D:
   serializedVersion: 4
@@ -728,11 +730,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &949644552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8706245805622176842, guid: d7516728843dc18469614c20a9789792, type: 3}
+  m_PrefabInstance: {fileID: 8706245804689604930}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &949644553 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8706245805622176843, guid: d7516728843dc18469614c20a9789792, type: 3}
   m_PrefabInstance: {fileID: 8706245804689604930}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &949644554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949644552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4fac0dfff317f419d56c8aa49bfc8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Chains: []
 --- !u!1001 &8706245804689604930
 PrefabInstance:
   m_ObjectHideFlags: 0
