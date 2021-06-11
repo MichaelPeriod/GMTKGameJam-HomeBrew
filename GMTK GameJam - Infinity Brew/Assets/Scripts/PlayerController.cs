@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D RB;
     public float playerSpeed;
+    public int playerNumber;
     // Start is called before the first frame update
     void Start(){
         RB = gameObject.GetComponent<Rigidbody2D>();
@@ -13,6 +14,11 @@ public class PlayerController : MonoBehaviour
 
     void Update(){
         //Move it based on if pressing, dev set speed, and time since last frame
-        RB.AddForce(new Vector2(Input.GetAxis("Horizontal") * playerSpeed * Time.deltaTime * 100, Input.GetAxis("Vertical") * playerSpeed * Time.deltaTime * 100));
+	if (playerNumber == 1) {
+        	RB.AddForce(new Vector2(Input.GetAxis("Horizontal") * playerSpeed * Time.deltaTime * 100, Input.GetAxis("Vertical") * playerSpeed * Time.deltaTime * 100));
+	}
+	else {
+		RB.AddForce(new Vector2(Input.GetAxis("H2") * playerSpeed * Time.deltaTime * 100, Input.GetAxis("V2") * playerSpeed * Time.deltaTime * 100));
+        }
     }
 }
