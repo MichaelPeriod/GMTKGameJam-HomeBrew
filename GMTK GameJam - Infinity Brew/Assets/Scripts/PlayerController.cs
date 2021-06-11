@@ -20,7 +20,12 @@ public class PlayerController : MonoBehaviour
         if (playerNumber == 1) {
             RB.AddForce(new Vector2(Input.GetAxis("Horizontal") * playerSpeed * Time.deltaTime * 100, Input.GetAxis("Vertical") * playerSpeed * Time.deltaTime * 100));
             if(Vector2.Distance(gameObject.GetComponent<Transform>().position, otherPlayer.GetComponent<Transform>().position) < cutDistance){
-                Chain.GetComponent<CheckChopScript>().check();
+                if(!Chain.GetComponent<CheckChopScript>().chopping){
+                    Chain.GetComponent<CheckChopScript>().check();
+                }
+            } else {
+                Chain.GetComponent<CheckChopScript>().chopping = false;
+                Chain.GetComponent<PolygonCollider2D>().enabled = false;
             }
         } else {
             RB.AddForce(new Vector2(Input.GetAxis("H2") * playerSpeed * Time.deltaTime * 100, Input.GetAxis("V2") * playerSpeed * Time.deltaTime * 100));
