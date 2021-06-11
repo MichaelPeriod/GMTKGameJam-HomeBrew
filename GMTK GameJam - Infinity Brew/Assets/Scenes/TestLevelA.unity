@@ -397,6 +397,7 @@ GameObject:
   - component: {fileID: 435999265}
   - component: {fileID: 435999267}
   - component: {fileID: 435999268}
+  - component: {fileID: 435999269}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -505,6 +506,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!232 &435999269
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435999264}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 433819754}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 4.92
+  m_MaxDistanceOnly: 1
 --- !u!1 &557442565
 GameObject:
   m_ObjectHideFlags: 0
