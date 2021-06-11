@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: DesertDoors_0
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -429583179671999762, guid: c0f8af3e2c5289f4eb317c89590a016c, type: 3}
+  m_Sprite: {fileID: -429583179671999762, guid: e9eb3ec06eb33c64680a2a1d23f1cf29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
