@@ -21,6 +21,9 @@ public class enemy : MonoBehaviour
     public Vector2 direction;
     public float LineofSite = 5f;
     bool move = false;
+    public HealthManager HM;
+    public PlayerController P1;
+    public PlayerController P2;
     void Start()
     {
      	Player1 = GameObject.Find("Player1").GetComponent<Transform>();   
@@ -81,6 +84,12 @@ public class enemy : MonoBehaviour
 			Invoke("des", 0.367f);
 			anim.SetTrigger("hurt");
 		}
+	}
+	if (other.gameObject.tag == "Player" && HealthManager.Cooldown == false) {
+		HealthManager.Health -= 1;
+		HM.StartCoroutine("WaitSystem");
+		P1.StartCoroutine("FlashCircle");
+		P2.StartCoroutine("FlashCircle");
 	}
     }
     void des() {
