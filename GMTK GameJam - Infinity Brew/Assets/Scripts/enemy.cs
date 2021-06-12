@@ -96,4 +96,8 @@ public class enemy : MonoBehaviour
     void Nadan() {
 	man = 0;
     }
+
+	void delete(){
+		Destroy(gameObject);
+	}
 }

@@ -54,10 +54,12 @@ public class CheckChopScript : MonoBehaviour
         PC.SetPath(0, Farthest);
     }
 
-    void OnTriggerStay2D(Collider2D Trigger){
+    void OnTriggerEnter2D(Collider2D Trigger){
         //Not working????
-        if(Trigger.CompareTag("Monster")){
-            Debug.Log("Kill");
+        //Debug.Log(Trigger.gameObject.tag);
+        if(Trigger.gameObject.tag == "Monster"){
+            Debug.Log("Die");
+            Trigger.gameObject.GetComponent<Animator>().SetTrigger("Die");
         }
     }
 }
