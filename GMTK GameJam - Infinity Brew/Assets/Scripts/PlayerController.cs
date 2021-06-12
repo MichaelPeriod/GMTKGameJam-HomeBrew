@@ -13,12 +13,16 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer Roomba;
     public Color transparent;
     public Color normal;
+    public AudioSource source;
+    public AudioClip chain;
+    int add = 0;
     // Start is called before the first frame update
     void Start(){
         RB = gameObject.GetComponent<Rigidbody2D>();
     }
 
     void Update(){
+        Physics2D.IgnoreLayerCollision(1,4);
         //Move it based on if pressing, dev set speed, and time since last frame
         if (playerNumber == 1) {
             RB.AddForce(new Vector2(Input.GetAxis("Horizontal") * playerSpeed * Time.deltaTime * 100, Input.GetAxis("Vertical") * playerSpeed * Time.deltaTime * 100));
@@ -33,6 +37,17 @@ public class PlayerController : MonoBehaviour
         } else {
             RB.AddForce(new Vector2(Input.GetAxis("H2") * playerSpeed * Time.deltaTime * 100, Input.GetAxis("V2") * playerSpeed * Time.deltaTime * 100));
         }
+	if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0 || Input.GetAxis("H2") != 0 || Input.GetAxis("V2") != 0 ) {
+		add++;
+		if (add == 1) {
+			source.clip = chain;
+			source.Play();
+		}
+        }
+	else {
+		source.Stop();
+		add = 0;
+	}
     }
     public IEnumerator FlashCircle() {
 	 Roomba.color = transparent; 
