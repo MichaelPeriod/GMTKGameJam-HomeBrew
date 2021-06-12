@@ -61,8 +61,13 @@ public class enemy : MonoBehaviour
 		else
 			dude = false;
 	}
-	if (add == 0 && dude == false && move == true)
-        	transform.position = Vector2.MoveTowards(transform.position, Target.position,  speed * Time.deltaTime);
+	transform.position = Vector2.MoveTowards(transform.position, Target.position,  speed * Time.deltaTime);
+	if (add == 0 && dude == false && move == true) {
+		speed = 1;
+	}
+	else {
+		speed = 0;
+	}
 	if (dude == true) {
 		man++;
 		if (man == 1) {
