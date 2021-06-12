@@ -6,6 +6,7 @@ public class enemy : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
+    public float enemSpeed;
     public Animator anim;
     public Transform Target;
     public GameObject Projectile;
@@ -26,8 +27,8 @@ public class enemy : MonoBehaviour
     public PlayerController P2;
     void Start()
     {
-     	Player1 = GameObject.Find("Player1").GetComponent<Transform>();   
-	Player2 = GameObject.Find("Player2").GetComponent<Transform>();   
+     	    Player1 = GameObject.Find("Player1").GetComponent<Transform>();   
+	    Player2 = GameObject.Find("Player2").GetComponent<Transform>();   
     }
 
     // Update is called once per frame
@@ -63,7 +64,7 @@ public class enemy : MonoBehaviour
 	}
 	transform.position = Vector2.MoveTowards(transform.position, Target.position,  speed * Time.deltaTime);
 	if (add == 0 && dude == false && move == true) {
-		speed = 1;
+		speed = enemSpeed;
 	}
 	else {
 		speed = 0;
@@ -83,19 +84,19 @@ public class enemy : MonoBehaviour
     }
     void OnCollisionEnter2D (Collision2D other) {
     	if (other.gameObject.tag == "Bullet" && add == 0) {
-		add++;
-		if (add == 1) {
-			Health -= 1;
-			Invoke("des", 0.367f);
-			anim.SetTrigger("hurt");
-		}
-	}
-	if (other.gameObject.tag == "Player" && HealthManager.Cooldown == false) {
-		HealthManager.Health -= 1;
-		HM.StartCoroutine("WaitSystem");
-		P1.StartCoroutine("FlashCircle");
-		P2.StartCoroutine("FlashCircle");
-	}
+		    add++;
+		    if (add == 1) {
+			    Health -= 1;
+			    Invoke("des", 0.367f);
+			    anim.SetTrigger("hurt");
+		    }
+	    }
+	    if (other.gameObject.tag == "Player" && HealthManager.Cooldown == false) {
+		    HealthManager.Health -= 1;
+		    HM.StartCoroutine("WaitSystem");
+		    P1.StartCoroutine("FlashCircle");
+		    P2.StartCoroutine("FlashCircle");
+	    }
     }
     void des() {
 	add = 0;
