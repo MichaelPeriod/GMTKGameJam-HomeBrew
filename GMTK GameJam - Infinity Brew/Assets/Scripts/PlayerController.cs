@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     public float cutDistance = 1f;
     public GameObject otherPlayer;
     public GameObject Chain;
+    public SpriteRenderer Roomba;
+    public Color transparent;
+    public Color normal;
     // Start is called before the first frame update
     void Start(){
         RB = gameObject.GetComponent<Rigidbody2D>();
@@ -31,4 +34,26 @@ public class PlayerController : MonoBehaviour
             RB.AddForce(new Vector2(Input.GetAxis("H2") * playerSpeed * Time.deltaTime * 100, Input.GetAxis("V2") * playerSpeed * Time.deltaTime * 100));
         }
     }
+    public IEnumerator FlashCircle() {
+	 Roomba.color = transparent; 
+	 yield return new WaitForSeconds(0.1f);
+	 Roomba.color = normal; 
+	 yield return new WaitForSeconds(0.1f);
+	 Roomba.color = transparent; 
+	 yield return new WaitForSeconds(0.1f);
+	 Roomba.color = normal; 
+	 yield return new WaitForSeconds(0.1f);
+	 Roomba.color = transparent; 
+	 yield return new WaitForSeconds(0.1f);
+	 Roomba.color = normal; 
+	 yield return new WaitForSeconds(0.1f);
+	 Roomba.color = transparent; 
+	 yield return new WaitForSeconds(0.1f);
+	 Roomba.color = normal; 
+	 yield return new WaitForSeconds(0.1f);
+	 Roomba.color = transparent; 
+	 yield return new WaitForSeconds(0.1f);
+	 Roomba.color = normal; 
+	 yield return new WaitForSeconds(0.1f);
+    } 
 }
