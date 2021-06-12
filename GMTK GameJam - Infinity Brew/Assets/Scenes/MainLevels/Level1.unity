@@ -3323,6 +3323,9 @@ MonoBehaviour:
   cutDistance: 2
   otherPlayer: {fileID: 833696657}
   Chain: {fileID: 528253374}
+  Roomba: {fileID: 342094745}
+  transparent: {r: 0, g: 0, b: 0, a: 0}
+  normal: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &342094745
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3781,6 +3784,9 @@ MonoBehaviour:
   cutDistance: 1.5
   otherPlayer: {fileID: 342094740}
   Chain: {fileID: 528253374}
+  Roomba: {fileID: 833696662}
+  transparent: {r: 1, g: 1, b: 1, a: 0}
+  normal: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &833696662
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27575,6 +27581,50 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1558130044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1558130046}
+  - component: {fileID: 1558130045}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1558130045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558130044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5873397db8c21f348831d9fe878cf489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaitTime: 1
+--- !u!4 &1558130046
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558130044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.293022, y: 13.562103, z: -553.8873}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1586559591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28608,5 +28658,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 382756419571108581, guid: 14e6ebfb0d4bb7545af3367fa6b63d37, type: 3}
+      propertyPath: HM
+      value: 
+      objectReference: {fileID: 1558130045}
+    - target: {fileID: 382756419571108581, guid: 14e6ebfb0d4bb7545af3367fa6b63d37, type: 3}
+      propertyPath: P1
+      value: 
+      objectReference: {fileID: 833696661}
+    - target: {fileID: 382756419571108581, guid: 14e6ebfb0d4bb7545af3367fa6b63d37, type: 3}
+      propertyPath: P2
+      value: 
+      objectReference: {fileID: 342094744}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14e6ebfb0d4bb7545af3367fa6b63d37, type: 3}

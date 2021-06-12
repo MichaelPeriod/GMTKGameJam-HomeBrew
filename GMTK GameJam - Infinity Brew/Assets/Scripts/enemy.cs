@@ -76,7 +76,7 @@ public class enemy : MonoBehaviour
 		Destroy(this.gameObject);
 	}
     }
-    void OnTriggerEnter2D (Collider2D other) {
+    void OnCollisionEnter2D (Collision2D other) {
     	if (other.gameObject.tag == "Bullet" && add == 0) {
 		add++;
 		if (add == 1) {
