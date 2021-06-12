@@ -1,61 +1,61 @@
 fileFormatVersion: 2
-guid: 888db2a11e492d04687eb71152920f19
+guid: 08c5f8d86cfcaf54e90de213332e6618
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6133450995172794959
-    second: StairsLR_0
+      213: 1831861233894160707
+    second: StairsLR 1_0
   - first:
-      213: -4866755246115921101
-    second: StairsLR_1
+      213: -6379161901457850134
+    second: StairsLR 1_1
   - first:
-      213: 2554254453581734627
-    second: StairsLR_2
+      213: 7053181488736905471
+    second: StairsLR 1_2
   - first:
-      213: 5308212787051460368
-    second: StairsLR_3
+      213: 7165201261146068963
+    second: StairsLR 1_3
   - first:
-      213: 5637162797012724696
-    second: StairsLR_4
+      213: 6048321789825914323
+    second: StairsLR 1_4
   - first:
-      213: 537698298476228549
-    second: StairsLR_5
+      213: -4661935485137518924
+    second: StairsLR 1_5
   - first:
-      213: 6467277524382070174
-    second: StairsLR_6
+      213: 6241322052863338540
+    second: StairsLR 1_6
   - first:
-      213: -943843788239591485
-    second: StairsLR_7
+      213: -1161493385342886108
+    second: StairsLR 1_7
   - first:
-      213: 2224607197874194937
-    second: StairsLR_8
+      213: -2528140502109960929
+    second: StairsLR 1_8
   - first:
-      213: -6344390009728337414
-    second: StairsLR_9
+      213: -2323912376968535061
+    second: StairsLR 1_9
   - first:
-      213: 3504284994600696412
-    second: StairsLR_10
+      213: 6226670980027146957
+    second: StairsLR 1_10
   - first:
-      213: -7641523036148572104
-    second: StairsLR_11
+      213: 5902856147594031892
+    second: StairsLR 1_11
   - first:
-      213: 4960282660109706174
-    second: StairsLR_12
+      213: 8651328073730768380
+    second: StairsLR 1_12
   - first:
-      213: -5739550368927910280
-    second: StairsLR_13
+      213: -4608461859075734850
+    second: StairsLR 1_13
   - first:
-      213: -8838076563110500198
-    second: StairsLR_14
+      213: 6205146934558977755
+    second: StairsLR 1_14
   - first:
-      213: -1265189494289740772
-    second: StairsLR_15
+      213: 3747852346274247820
+    second: StairsLR 1_15
   - first:
-      213: 8744646458780131136
-    second: StairsLR_16
+      213: -9076349432731519582
+    second: StairsLR 1_16
   - first:
-      213: 7241592331148560625
-    second: StairsLR_17
+      213: -3237578966581984293
+    second: StairsLR 1_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -181,7 +181,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: StairsLR_0
+      name: StairsLR 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f426a860f256e1550800000000000000
-      internalID: 6133450995172794959
+      spriteID: 349f11c26141c6910800000000000000
+      internalID: 1831861233894160707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_1
+      name: StairsLR 1_1
       rect:
         serializedVersion: 2
         x: 16
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 333ed7a83efc57cb0800000000000000
-      internalID: -4866755246115921101
+      spriteID: ae046e28c0aa877a0800000000000000
+      internalID: -6379161901457850134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_2
+      name: StairsLR 1_2
       rect:
         serializedVersion: 2
         x: 32
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e2e2bb74e8827320800000000000000
-      internalID: 2554254453581734627
+      spriteID: ff82684d13fe1e160800000000000000
+      internalID: 7053181488736905471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_3
+      name: StairsLR 1_3
       rect:
         serializedVersion: 2
         x: 48
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 017736cd76f8aa940800000000000000
-      internalID: 5308212787051460368
+      spriteID: 3e7daca8598ef6360800000000000000
+      internalID: 7165201261146068963
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_4
+      name: StairsLR 1_4
       rect:
         serializedVersion: 2
         x: 64
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dbadf862b93b3e40800000000000000
-      internalID: 5637162797012724696
+      spriteID: 3d514d95f94ffe350800000000000000
+      internalID: 6048321789825914323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_5
+      name: StairsLR 1_5
       rect:
         serializedVersion: 2
         x: 80
@@ -300,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cfe10de0c9467700800000000000000
-      internalID: 537698298476228549
+      spriteID: 4bef692506a7d4fb0800000000000000
+      internalID: -4661935485137518924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_6
+      name: StairsLR 1_6
       rect:
         serializedVersion: 2
         x: 0
@@ -321,14 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9539a0b4a260c950800000000000000
-      internalID: 6467277524382070174
+      spriteID: c282bb1d651ad9650800000000000000
+      internalID: 6241322052863338540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_7
+      name: StairsLR 1_7
       rect:
         serializedVersion: 2
         x: 16
@@ -342,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c72586431bc6e2f0800000000000000
-      internalID: -943843788239591485
+      spriteID: 42fdbad7beb81efe0800000000000000
+      internalID: -1161493385342886108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_8
+      name: StairsLR 1_8
       rect:
         serializedVersion: 2
         x: 32
@@ -363,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f98112c5746fde10800000000000000
-      internalID: 2224607197874194937
+      spriteID: f154575ab9d3aecd0800000000000000
+      internalID: -2528140502109960929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_9
+      name: StairsLR 1_9
       rect:
         serializedVersion: 2
         x: 48
@@ -384,14 +384,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af9fa9176e234f7a0800000000000000
-      internalID: -6344390009728337414
+      spriteID: be328a9710ecfbfd0800000000000000
+      internalID: -2323912376968535061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_10
+      name: StairsLR 1_10
       rect:
         serializedVersion: 2
         x: 64
@@ -405,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5af7e6d2a8b1a030800000000000000
-      internalID: 3504284994600696412
+      spriteID: dc260c91444996650800000000000000
+      internalID: 6226670980027146957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_11
+      name: StairsLR 1_11
       rect:
         serializedVersion: 2
         x: 80
@@ -426,14 +426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 830666ff84bd3f590800000000000000
-      internalID: -7641523036148572104
+      spriteID: 413b29d34682be150800000000000000
+      internalID: 5902856147594031892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_12
+      name: StairsLR 1_12
       rect:
         serializedVersion: 2
         x: 0
@@ -447,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb36e557cc676d440800000000000000
-      internalID: 4960282660109706174
+      spriteID: cfd361edb01bf0870800000000000000
+      internalID: 8651328073730768380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_13
+      name: StairsLR 1_13
       rect:
         serializedVersion: 2
         x: 16
@@ -468,14 +468,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 876f69159550950b0800000000000000
-      internalID: -5739550368927910280
+      spriteID: eb2cad81b547b00c0800000000000000
+      internalID: -4608461859075734850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_14
+      name: StairsLR 1_14
       rect:
         serializedVersion: 2
         x: 32
@@ -489,14 +489,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a98e7162138d85580800000000000000
-      internalID: -8838076563110500198
+      spriteID: bdeed7db24c1d1650800000000000000
+      internalID: 6205146934558977755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_15
+      name: StairsLR 1_15
       rect:
         serializedVersion: 2
         x: 48
@@ -510,14 +510,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1ccd43bbd4217ee0800000000000000
-      internalID: -1265189494289740772
+      spriteID: c847a4a1adb030430800000000000000
+      internalID: 3747852346274247820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_16
+      name: StairsLR 1_16
       rect:
         serializedVersion: 2
         x: 64
@@ -531,14 +531,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04f97f58f993b5970800000000000000
-      internalID: 8744646458780131136
+      spriteID: 2a538bc87445a0280800000000000000
+      internalID: -9076349432731519582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StairsLR_17
+      name: StairsLR 1_17
       rect:
         serializedVersion: 2
         x: 80
@@ -552,8 +552,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f88d4a8bdd4f7460800000000000000
-      internalID: 7241592331148560625
+      spriteID: bd3ca94551fc113d0800000000000000
+      internalID: -3237578966581984293
       vertices: []
       indices: 
       edges: []
