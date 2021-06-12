@@ -21,8 +21,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &7459221969000806567
-CircleCollider2D:
+--- !u!61 &5535000247599068843
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -34,9 +34,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.02003194, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.06, y: 0.03}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 0.019936113, y: 0.03}
+  m_EdgeRadius: 0
 --- !u!114 &1812141246368373551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,11 +72,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 329611784667162609, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 329611784667162609, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 329611784667162609, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -109,20 +119,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1781630327903518769, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f2de25306b9f5ed44805a317226dd74b, type: 3}
+    - target: {fileID: 1781630327903518769, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
       propertyPath: m_Color.b
-      value: 0.082352914
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1781630327903518769, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
       propertyPath: m_Color.g
-      value: 0.6004464
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1781630327903518769, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
       propertyPath: m_Color.r
-      value: 0.90588236
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1781630327903518769, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5392244849549052515, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
       propertyPath: m_Name

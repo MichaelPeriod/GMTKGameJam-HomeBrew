@@ -1503,11 +1503,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 329611784667162609, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 329611784667162609, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 329611784667162609, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1589,6 +1589,22 @@ PrefabInstance:
       propertyPath: enemyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7164789121985438669, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
+      propertyPath: shootingDist
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164789121985438669, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
+      propertyPath: bulletStart.x
+      value: -4.477
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164789121985438669, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
+      propertyPath: bulletStart.y
+      value: -2.246
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164789121985438669, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
+      propertyPath: ProjectilePrefab
+      value: 
+      objectReference: {fileID: 3913487281650958691, guid: 27959edb767589646a0b0225e9709959, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
 --- !u!1 &259750072
