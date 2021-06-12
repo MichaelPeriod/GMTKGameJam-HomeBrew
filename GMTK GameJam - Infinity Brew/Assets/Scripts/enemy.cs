@@ -36,7 +36,7 @@ public class enemy : MonoBehaviour
 	    Player2 = GameObject.Find("Player2").GetComponent<Transform>();
 		P1 = GameObject.Find("Player1").GetComponent<PlayerController>();   
 	    P2 = GameObject.Find("Player2").GetComponent<PlayerController>();
-		HM = GameObject.Find("GameStateManager").GetComponent<HealthManager>();
+		//HM = GameObject.Find("GameManager").GetComponent<HealthManager>();
 
 		switch(enemyType){
 			case EnemyTypes.Slime:
@@ -110,14 +110,14 @@ public class enemy : MonoBehaviour
 		    }
 	    }
 	    if (other.gameObject.tag == "Player" && HealthManager.Cooldown == false) {
-		    HealthManager.Health -= 1;
+		    HM.looseHealth(10);
 		    HM.StartCoroutine("WaitSystem");
 		    P1.StartCoroutine("FlashCircle");
 		    P2.StartCoroutine("FlashCircle");
 	    }
     }
     void des() {
-	IncrementCounterOne = 0;
+		IncrementCounterOne = 0;
     }
     void Shoot(Vector2 direction) {
 	GameObject b = Instantiate(ProjectilePrefab) as GameObject;
