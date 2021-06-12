@@ -17,8 +17,10 @@ public class enemy : MonoBehaviour
     int add = 0;
     int man = 0;
     bool dude = false;
-       public float bulletSpeed = 7.0f;
-   public Vector2 direction;
+    public float bulletSpeed = 7.0f;
+    public Vector2 direction;
+    public float LineofSite = 5f;
+    bool move = false;
     void Start()
     {
      	Player1 = GameObject.Find("Player1").GetComponent<Transform>();   
@@ -38,6 +40,12 @@ public class enemy : MonoBehaviour
 	}
 	Vector3 difference = Target.position - transform.position;
 	float distanceFromPlayer = Vector2.Distance(Target.position, transform.position);
+	if (distanceFromPlayer > LineofSite) {
+		move = false;		
+	}
+	else {
+		move = true;
+	}
 	if (transform.position.x < Target.position.x) {
 		transform.localScale = new Vector3(1f, 1f, 1);
 	}
@@ -50,7 +58,7 @@ public class enemy : MonoBehaviour
 		else
 			dude = false;
 	}
-	if (add == 0 && dude == false)
+	if (add == 0 && dude == false && move == true)
         	transform.position = Vector2.MoveTowards(transform.position, Target.position,  speed * Time.deltaTime);
 	if (dude == true) {
 		man++;
