@@ -10,6 +10,8 @@ public class enemy : MonoBehaviour
     public Transform Target;
     public GameObject Projectile;
     public GameObject bulletStart;
+    public Transform Player1;
+    public Transform Player2;
     int Health = 3;
     public int enem;
     int add = 0;
@@ -19,12 +21,21 @@ public class enemy : MonoBehaviour
    public Vector2 direction;
     void Start()
     {
-     	Target = GameObject.FindWithTag("Player").GetComponent<Transform>();   
+     	Player1 = GameObject.Find("Player1").GetComponent<Transform>();   
+	Player2 = GameObject.Find("Player2").GetComponent<Transform>();   
     }
 
     // Update is called once per frame
     void Update()
     {
+	float P1difference = (Player1.position.x - transform.position.x) + (Player1.position.y - transform.position.y);
+	float P2difference = (Player2.position.x - transform.position.x) + (Player2.position.y - transform.position.y);
+	if (P2difference < P1difference) {
+		Target = Player2;
+	}
+	else if (P1difference < P2difference) {
+		Target = Player1;
+	}
 	Vector3 difference = Target.position - transform.position;
 	float distanceFromPlayer = Vector2.Distance(Target.position, transform.position);
 	if (transform.position.x < Target.position.x) {
