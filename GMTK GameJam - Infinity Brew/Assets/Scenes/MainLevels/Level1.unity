@@ -27877,6 +27877,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5978cefeb23a542a9b124282366d9c, type: 3}
+--- !u!95 &1655989208 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1041308972230127490, guid: 14e6ebfb0d4bb7545af3367fa6b63d37, type: 3}
+  m_PrefabInstance: {fileID: 7324020886980474731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1739702803
 GameObject:
   m_ObjectHideFlags: 0
@@ -28816,5 +28821,17 @@ PrefabInstance:
       propertyPath: P2
       value: 
       objectReference: {fileID: 342094744}
+    - target: {fileID: 382756419571108581, guid: 14e6ebfb0d4bb7545af3367fa6b63d37, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1655989208}
+    - target: {fileID: 382756419571108581, guid: 14e6ebfb0d4bb7545af3367fa6b63d37, type: 3}
+      propertyPath: maxSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7824570968964505602, guid: 14e6ebfb0d4bb7545af3367fa6b63d37, type: 3}
+      propertyPath: m_LinearDrag
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14e6ebfb0d4bb7545af3367fa6b63d37, type: 3}

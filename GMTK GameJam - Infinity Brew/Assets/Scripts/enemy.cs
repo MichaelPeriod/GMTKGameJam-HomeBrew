@@ -5,30 +5,52 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float speed;
-    public float enemSpeed;
+	public enum EnemyTypes{
+		Slime,
+		Skelton,
+		Spider
+	};
+	public EnemyTypes enemyType;
+    public float maxSpeed;
+	public float currSpeed = 0;
     public Animator anim;
-    public Transform Target;
-    public GameObject Projectile;
-    public GameObject bulletStart;
-    public Transform Player1;
-    public Transform Player2;
-    int Health = 3;
-    public int enem;
-    int add = 0;
-    int man = 0;
-    bool dude = false;
-    public float bulletSpeed = 7.0f;
+    private Transform Target;
+    public GameObject ProjectilePrefab;
+    public Vector2 bulletStart;
+    private Transform Player1;
+    private Transform Player2;
+    private int IncrementCounterOne = 0;
+    private int IncrementCounterTwo = 0;
+    private bool inShootingRange = false;
+    private float bulletStartSpeed = 7.0f;
     public Vector2 direction;
     public float LineofSite = 5f;
+	public float shootingDist = 4.5f;
     bool move = false;
-    public HealthManager HM;
-    public PlayerController P1;
-    public PlayerController P2;
+    private HealthManager HM;
+    private PlayerController P1;
+    private PlayerController P2;
     void Start()
     {
-     	    Player1 = GameObject.Find("Player1").GetComponent<Transform>();   
-	    Player2 = GameObject.Find("Player2").GetComponent<Transform>();   
+     	Player1 = GameObject.Find("Player1").GetComponent<Transform>();   
+	    Player2 = GameObject.Find("Player2").GetComponent<Transform>();
+		P1 = GameObject.Find("Player1").GetComponent<PlayerController>();   
+	    P2 = GameObject.Find("Player2").GetComponent<PlayerController>();
+		HM = GameObject.Find("GameStateManager").GetComponent<HealthManager>();
+
+		switch(enemyType){
+			case EnemyTypes.Slime:
+				maxSpeed = 25;
+				break;
+			case EnemyTypes.Skelton:
+				maxSpeed = 15;
+				bulletStartSpeed = 7f;
+				break;
+			case EnemyTypes.Spider:
+				maxSpeed = 15;
+				bulletStartSpeed = 4f;
+				break;
+		}
     }
 
     // Update is called once per frame
@@ -56,37 +78,33 @@ public class enemy : MonoBehaviour
 	else {
 		transform.localScale = new Vector3(-1f, 1f, 1);
 	}
-	if (enem == 2) {
-		if (distanceFromPlayer < 4.5) 	
-			dude = true;
+	if (enemyType == EnemyTypes.Skelton) {
+		if (distanceFromPlayer < shootingDist) 	
+			inShootingRange = true;
 		else
-			dude = false;
+			inShootingRange = false;
 	}
-	transform.position = Vector2.MoveTowards(transform.position, Target.position,  speed * Time.deltaTime);
-	if (add == 0 && dude == false && move == true) {
-		speed = enemSpeed;
+	transform.position = Vector2.MoveTowards(transform.position, Target.position,  currSpeed * Time.deltaTime);
+	if (IncrementCounterOne == 0 && inShootingRange == false && move == true) {
+		currSpeed = maxSpeed;
 	}
 	else {
-		speed = 0;
+		currSpeed = 0;
 	}
-	if (dude == true) {
-		man++;
-		if (man == 1) {
-			float distance = difference.magnitude;
-            		direction = difference / distance;
-            		direction.Normalize();
-	    		Shoot(direction);
+		if (inShootingRange == true) {
+			IncrementCounterTwo++;
+			if (IncrementCounterTwo == 1) {
+				float distance = difference.magnitude;
+						direction = difference / distance;
+						direction.Normalize();
+					Shoot(direction);
+			}
 		}
-	}
-	if (Health == 0) {
-		Destroy(this.gameObject);
-	}
     }
     void OnCollisionEnter2D (Collision2D other) {
-    	if (other.gameObject.tag == "Bullet" && add == 0) {
-		    add++;
-		    if (add == 1) {
-			    Health -= 1;
+    	if (other.gameObject.tag == "Bullet" && IncrementCounterOne == 0) {
+		    IncrementCounterOne++;
+		    if (IncrementCounterOne == 1) {
 			    Invoke("des", 0.367f);
 			    anim.SetTrigger("hurt");
 		    }
@@ -99,17 +117,17 @@ public class enemy : MonoBehaviour
 	    }
     }
     void des() {
-	add = 0;
+	IncrementCounterOne = 0;
     }
     void Shoot(Vector2 direction) {
-	GameObject b = Instantiate(Projectile) as GameObject;
-        b.transform.position = bulletStart.transform.position;
-	b.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+	GameObject b = Instantiate(ProjectilePrefab) as GameObject;
+        b.transform.position = bulletStart;
+	b.GetComponent<Rigidbody2D>().velocity = direction * bulletStartSpeed;
 	Invoke("Nadan", 2f);
 	
     }
     void Nadan() {
-	man = 0;
+		IncrementCounterTwo = 0;
     }
 
 	void delete(){
