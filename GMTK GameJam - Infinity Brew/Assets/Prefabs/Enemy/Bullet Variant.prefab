@@ -21,6 +21,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &7459221969000806567
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3913487281650958691}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &1812141246368373551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +130,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7164789121985438669, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
-    - {fileID: 3327327961515547720, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: da906198e7f57de4d85fa6e5f1bfb8eb, type: 3}
 --- !u!1 &3913487281650958691 stripped
 GameObject:
