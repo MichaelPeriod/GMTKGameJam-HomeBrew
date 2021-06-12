@@ -36,14 +36,14 @@ public class enemy : MonoBehaviour
 	    Player2 = GameObject.Find("Player2").GetComponent<Transform>();
 		P1 = GameObject.Find("Player1").GetComponent<PlayerController>();   
 	    P2 = GameObject.Find("Player2").GetComponent<PlayerController>();
-		//HM = GameObject.Find("GameManager").GetComponent<HealthManager>();
+		HM = GameObject.Find("GameManager").GetComponent<HealthManager>();
 
 		switch(enemyType){
 			case EnemyTypes.Slime:
-				maxSpeed = 25;
+				maxSpeed = 1;
 				break;
 			case EnemyTypes.Skelton:
-				maxSpeed = 15;
+				maxSpeed = 0;
 				bulletStartSpeed = 7f;
 				break;
 			case EnemyTypes.Spider:
@@ -73,10 +73,20 @@ public class enemy : MonoBehaviour
 		move = true;
 	}
 	if (transform.position.x < Target.position.x) {
-		transform.localScale = new Vector3(1f, 1f, 1);
+		if (enemyType == EnemyTypes.Slime) {
+			transform.localScale = new Vector3(1f, 1f, 1);
+		}
+		else if (enemyType == EnemyTypes.Skelton) {
+			transform.localScale = new Vector3(6f, 6f, 1);
+		}
 	}
 	else {
-		transform.localScale = new Vector3(-1f, 1f, 1);
+		if (enemyType == EnemyTypes.Slime) {
+			transform.localScale = new Vector3(-1f, 1f, 1);
+		}
+		else if (enemyType == EnemyTypes.Skelton) {
+			transform.localScale = new Vector3(-6f, 6f, 1);
+		}
 	}
 	if (enemyType == EnemyTypes.Skelton) {
 		if (distanceFromPlayer < shootingDist) 	

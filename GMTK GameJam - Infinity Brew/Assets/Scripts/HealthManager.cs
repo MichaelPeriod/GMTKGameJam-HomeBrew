@@ -12,7 +12,7 @@ public class HealthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Bar.value = Health / 100;
+        Bar.value = Health;
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class HealthManager : MonoBehaviour
 
     public void looseHealth(int looseAmt){
           Health -= looseAmt;
-          Bar.value = Health / 100;
+          Bar.value = Health;
     }
      public IEnumerator WaitSystem() {
           Cooldown = true;
