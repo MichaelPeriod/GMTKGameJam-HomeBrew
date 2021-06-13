@@ -3716,7 +3716,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c21162cc2430de24990006848e26070b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25036,5 +25036,13 @@ PrefabInstance:
       propertyPath: maxSpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9201560795185322234, guid: 71b3c3facaca0254e8c6159fb9378595, type: 3}
+      propertyPath: shootingDist
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201560795185322234, guid: 71b3c3facaca0254e8c6159fb9378595, type: 3}
+      propertyPath: ProjectilePrefab
+      value: 
+      objectReference: {fileID: 8884679987305923597, guid: e4a33daebd5bcfa479d8af8489313d20, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71b3c3facaca0254e8c6159fb9378595, type: 3}
