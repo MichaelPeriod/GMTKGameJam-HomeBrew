@@ -49,7 +49,7 @@ public class enemy : MonoBehaviour
 				break;
 			case EnemyTypes.Spider:
 				maxSpeed = 3;
-				bulletStartSpeed = 4f;
+				bulletStartSpeed = 7f;
 				break;
 		}
     }
@@ -89,7 +89,7 @@ public class enemy : MonoBehaviour
 			transform.localScale = new Vector3(-6f, 6f, 1);
 		}
 	}
-	if (enemyType == EnemyTypes.Skelton) {
+	if (enemyType == EnemyTypes.Skelton || enemyType == EnemyTypes.Spider) {
 		if (distanceFromPlayer < shootingDist) 	
 			inShootingRange = true;
 		else
@@ -137,7 +137,9 @@ public class enemy : MonoBehaviour
 		IncrementCounterOne = 0;
     }
     void Shoot(Vector2 direction) {
-	bow.SetTrigger("Shoot");
+	if (enemyType == EnemyTypes.Skelton) {
+		bow.SetTrigger("Shoot");
+	}
 	GameObject b = Instantiate(ProjectilePrefab) as GameObject;
         b.transform.position = bulletStart.transform.position;
 	b.GetComponent<Rigidbody2D>().velocity = direction * bulletStartSpeed;
