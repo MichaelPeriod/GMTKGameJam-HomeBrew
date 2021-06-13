@@ -16,7 +16,7 @@ public class enemy : MonoBehaviour
     public Animator anim;
     private Transform Target;
     public GameObject ProjectilePrefab;
-    public Vector2 bulletStart;
+    public GameObject bulletStart;
     private Transform Player1;
     private Transform Player2;
     private int IncrementCounterOne = 0;
@@ -30,6 +30,7 @@ public class enemy : MonoBehaviour
     private HealthManager HM;
     private PlayerController P1;
     private PlayerController P2;
+    public Animator bow;
     void Start()
     {
      	Player1 = GameObject.Find("Player1").GetComponent<Transform>();   
@@ -125,13 +126,20 @@ public class enemy : MonoBehaviour
 		    P1.StartCoroutine("FlashCircle");
 		    P2.StartCoroutine("FlashCircle");
 	    }
-    }
+    }	
+    void OnTriggerExit2D (Collider2D other) {
+	if (other.gameObject.name == "box" && enemyType == EnemyTypes.Skelton) {
+		anim.SetTrigger("die");
+		Invoke("boom", 0.2f);
+	}
+     }
     void des() {
 		IncrementCounterOne = 0;
     }
     void Shoot(Vector2 direction) {
+	bow.SetTrigger("Shoot");
 	GameObject b = Instantiate(ProjectilePrefab) as GameObject;
-        b.transform.position = bulletStart;
+        b.transform.position = bulletStart.transform.position;
 	b.GetComponent<Rigidbody2D>().velocity = direction * bulletStartSpeed;
 	Invoke("Nadan", 2f);
 	
@@ -143,4 +151,7 @@ public class enemy : MonoBehaviour
 	void delete(){
 		Destroy(gameObject);
 	}
+    void boom() {
+	Destroy(this.gameObject);
+    }
 }
