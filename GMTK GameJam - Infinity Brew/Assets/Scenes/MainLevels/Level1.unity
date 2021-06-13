@@ -29593,6 +29593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skelaton
       objectReference: {fileID: 0}
+    - target: {fileID: 5633347504970814087, guid: c366dfa2cd3d51d4997844b376275d96, type: 3}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     - target: {fileID: 7464364626287082281, guid: c366dfa2cd3d51d4997844b376275d96, type: 3}
       propertyPath: maxSpeed
       value: 3
