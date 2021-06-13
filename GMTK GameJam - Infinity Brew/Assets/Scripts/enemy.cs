@@ -8,7 +8,8 @@ public class enemy : MonoBehaviour
 	public enum EnemyTypes{
 		Slime,
 		Skelton,
-		Spider
+		Spider,
+		Skela
 	};
 	public EnemyTypes enemyType;
     public float maxSpeed;
@@ -51,6 +52,10 @@ public class enemy : MonoBehaviour
 				maxSpeed = 3;
 				bulletStartSpeed = 7f;
 				break;
+			case EnemyTypes.Skela:
+				maxSpeed = 3;
+				bulletStartSpeed = 7f;
+				break;
 		}
     }
 
@@ -77,7 +82,7 @@ public class enemy : MonoBehaviour
 		if (enemyType == EnemyTypes.Slime) {
 			transform.localScale = new Vector3(1f, 1f, 1);
 		}
-		else if (enemyType == EnemyTypes.Skelton) {
+		else if (enemyType == EnemyTypes.Skelton || enemyType == EnemyTypes.Skela) {
 			transform.localScale = new Vector3(6f, 6f, 1);
 		}
 	}
@@ -85,11 +90,11 @@ public class enemy : MonoBehaviour
 		if (enemyType == EnemyTypes.Slime) {
 			transform.localScale = new Vector3(-1f, 1f, 1);
 		}
-		else if (enemyType == EnemyTypes.Skelton) {
+		else if (enemyType == EnemyTypes.Skelton || enemyType == EnemyTypes.Skela) {
 			transform.localScale = new Vector3(-6f, 6f, 1);
 		}
 	}
-	if (enemyType == EnemyTypes.Skelton || enemyType == EnemyTypes.Spider) {
+	if (enemyType == EnemyTypes.Skelton || enemyType == EnemyTypes.Spider || enemyType == EnemyTypes.Skela) {
 		if (distanceFromPlayer < shootingDist) 	
 			inShootingRange = true;
 		else
@@ -128,7 +133,7 @@ public class enemy : MonoBehaviour
 	    }
     }	
     void OnTriggerExit2D (Collider2D other) {
-	if (other.gameObject.name == "box" && enemyType == EnemyTypes.Skelton) {
+	if (other.gameObject.name == "box" && enemyType == EnemyTypes.Skelton || enemyType == EnemyTypes.Skela) {
 		anim.SetTrigger("die");
 		Invoke("boom", 0.2f);
 	}
@@ -137,7 +142,7 @@ public class enemy : MonoBehaviour
 		IncrementCounterOne = 0;
     }
     void Shoot(Vector2 direction) {
-	if (enemyType == EnemyTypes.Skelton) {
+	if (enemyType == EnemyTypes.Skelton || enemyType == EnemyTypes.Skela) {
 		bow.SetTrigger("Shoot");
 	}
 	GameObject b = Instantiate(ProjectilePrefab) as GameObject;
