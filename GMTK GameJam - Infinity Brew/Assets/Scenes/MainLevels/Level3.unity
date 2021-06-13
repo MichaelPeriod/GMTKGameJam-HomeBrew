@@ -7736,7 +7736,7 @@ MonoBehaviour:
   Health: 100
   WaitTime: 1
   Bar: {fileID: 737970636}
-  Level: Level1
+  Level: Level3
 --- !u!4 &1600405743
 Transform:
   m_ObjectHideFlags: 0
