@@ -11,7 +11,7 @@ public class TriggerScript : MonoBehaviour
     private ManageEvents GSMScript;
 
     void Start(){
-        GSMScript = GameObject.Find("GameStateManager").GetComponent<ManageEvents>();
+        GSMScript = GameObject.Find("GameManager").GetComponent<ManageEvents>();
     }
 
     void OnTriggerEnter2D(Collider2D collision){

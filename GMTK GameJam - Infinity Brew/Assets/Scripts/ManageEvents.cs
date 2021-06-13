@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ManageEvents : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class ManageEvents : MonoBehaviour
                 openDoor(-6, 1, openDoorTiles[0]);
                 openDoor(-5, 1, openDoorTiles[1]);
                 break;
+            case 2:
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                break;
+
             //Default way to add
             /*case {ID number}:
                 Actions
