@@ -211,6 +211,11 @@ MonoBehaviour:
   cutDistance: 1.5
   otherPlayer: {fileID: 1422294996}
   Chain: {fileID: 788782897}
+  Roomba: {fileID: 0}
+  transparent: {r: 0, g: 0, b: 0, a: 0}
+  normal: {r: 0, g: 0, b: 0, a: 0}
+  source: {fileID: 0}
+  chain: {fileID: 0}
 --- !u!212 &7084919
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1149,6 +1154,11 @@ MonoBehaviour:
   cutDistance: 2
   otherPlayer: {fileID: 7084914}
   Chain: {fileID: 788782897}
+  Roomba: {fileID: 0}
+  transparent: {r: 0, g: 0, b: 0, a: 0}
+  normal: {r: 0, g: 0, b: 0, a: 0}
+  source: {fileID: 0}
+  chain: {fileID: 0}
 --- !u!212 &1422295001
 SpriteRenderer:
   m_ObjectHideFlags: 0
