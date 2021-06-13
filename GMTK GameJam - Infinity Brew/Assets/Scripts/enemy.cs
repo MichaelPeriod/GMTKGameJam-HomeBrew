@@ -48,7 +48,7 @@ public class enemy : MonoBehaviour
 				bulletStartSpeed = 7f;
 				break;
 			case EnemyTypes.Spider:
-				maxSpeed = 15;
+				maxSpeed = 3;
 				bulletStartSpeed = 4f;
 				break;
 		}
