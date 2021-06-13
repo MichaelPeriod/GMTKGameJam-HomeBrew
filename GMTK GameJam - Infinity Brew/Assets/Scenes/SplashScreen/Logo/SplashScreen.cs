@@ -24,6 +24,6 @@ public class SplashScreen : MonoBehaviour
 	Invoke("SwitchScene", 1f);
     }
     void SwitchScene() {
-	SceneManager.LoadScene("BaseLevel");	
+	SceneManager.LoadScene("MainScreen");	
     }
 }
